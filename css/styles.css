@@ -62,7 +62,7 @@ p {
   }
 
   h1 {
-    font-size: 6.2rem;
+    font-size: 5.7rem;
   }
 }
 
@@ -409,12 +409,12 @@ a {
   .navbar__components,
   .navbar__registration {
     align-items: center;
+    border: 0;
     display: flex;
     flex-direction: row;
-    border: 0;
+    gap: 3rem;
     margin: 0;
     padding: 0;
-    gap: 3rem;
   }
 
   .link__navbar {
@@ -432,5 +432,45 @@ a {
 
   .nav__toggler {
     display: none;
+  }
+}
+
+/* Hero */
+.hero__image {
+  order: 1;
+  width: 100%;
+}
+
+.hero__content {
+  order: 2;
+  text-align: center;
+  max-width: 400px;
+  margin: 2rem auto 0;
+  font-size: 1.8rem;
+}
+
+.hero__heading {
+  margin-bottom: 1.8rem;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    padding: 0 0 0 3rem;
+  }
+  .hero__image {
+    order: 2;
+  }
+
+  .hero__content {
+    align-self: center;
+    order: 1;
+    text-align: left;
+    font-size: 1.6rem;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .hero__heading {
+    margin-bottom: 1rem;
   }
 }
