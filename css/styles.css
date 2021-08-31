@@ -474,3 +474,16 @@ a {
     margin-bottom: 1rem;
   }
 }
+
+/* Link Shortening Block */
+.link-shorten {
+  max-width: 1000px;
+  padding: 2rem 2rem 1rem 2rem;
+  border-radius: 7px;
+}
+
+@media screen and (min-width: 768px) {
+  .link-shorten {
+    padding: 3.3rem 5rem;
+  }
+}
