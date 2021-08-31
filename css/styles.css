@@ -45,7 +45,7 @@ h1 {
 }
 
 h2 {
-  font-size: 3.5rem;
+  font-size: 3.3rem;
 }
 
 p {
@@ -63,6 +63,10 @@ p {
 
   h1 {
     font-size: 5.7rem;
+  }
+
+  h2 {
+    font-size: 3.5rem;
   }
 }
 
@@ -554,5 +558,21 @@ a {
 
   .feature__record::after {
     bottom: 61%;
+  }
+}
+
+/* Call to Action Block*/
+.action {
+  padding: 3.6rem;
+  text-align: center;
+}
+
+.action h2 {
+  font-size: 2.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .action h2 {
+    font-size: 3.5rem;
   }
 }
