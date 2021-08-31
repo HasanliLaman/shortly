@@ -1,7 +1,7 @@
 @import "./normalize.css";
 
 :root {
-  --color-primary: hsl(0, 0%, 75%);
+  --color-primary: #f0f1f6;
   --color-secondary: rgb(255, 255, 255);
   --color-accent: hsl(257, 27%, 26%);
   --color-footer: hsl(260, 8%, 14%);
@@ -299,9 +299,8 @@ a {
 .feature {
   border-radius: 5px;
   text-align: center;
-  padding: 6.5rem 3.2rem 1.5rem;
+  padding: 6.5rem 3.2rem 2rem;
   position: relative;
-  margin: 5rem;
 }
 
 .feature__heading {
@@ -485,5 +484,75 @@ a {
 @media screen and (min-width: 768px) {
   .link-shorten {
     padding: 3.3rem 5rem;
+  }
+}
+
+/* Features block */
+.features {
+  text-align: center;
+}
+
+.features__info {
+  line-height: 1.6;
+  max-width: 400px;
+  margin: 0 auto 3.7rem;
+}
+
+.features__info h2 {
+  margin-bottom: 0.5rem;
+}
+
+.feature__blocks {
+  margin: 8.5rem 2rem 5rem;
+}
+
+.features .grid--1x3 {
+  gap: 9rem;
+}
+
+.feature__brand::after,
+.feature__record::after {
+  background: var(--color-cyan);
+  bottom: -5.5rem;
+  content: " ";
+  height: 5.5rem;
+  left: 49.5%;
+  position: absolute;
+  width: 0.8rem;
+}
+
+@media screen and (min-width: 768px) {
+  .feature__blocks {
+    margin: 7rem 2rem 12rem;
+  }
+
+  .features__info {
+    line-height: 1.75;
+  }
+
+  .feature__record {
+    margin-top: 3.5rem;
+    margin-bottom: -3.5rem;
+  }
+
+  .feature__customizable {
+    margin-top: 7rem;
+    margin-bottom: -7rem;
+  }
+
+  .features .grid--1x3 {
+    gap: 3rem;
+  }
+
+  .feature__brand::after,
+  .feature__record::after {
+    height: 0.8rem;
+    width: 3.05rem;
+    bottom: 49.5%;
+    left: 100%;
+  }
+
+  .feature__record::after {
+    bottom: 61%;
   }
 }
