@@ -4,7 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shortly</title>
+
+    <meta
+      name="description"
+      content="Build your brand's recognition and get detailed insights on how your links are performing."
+    />
+    <meta
+      property="og:title"
+      content="Shortly - More Than Just Shorter Links"
+    />
+    <meta
+      property="og:description"
+      content="Build your brand's recognition and get detailed insights on how your links are performing."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://shortly-lmnhsnl.netlify.app/" />
+    <meta
+      property="og:image"
+      content="https://pbs.twimg.com/profile_images/1047378912819531776/jg7V1u54_400x400.jpg"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <title>Shortly - More Than Just Shorter Links</title>
 
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,6 +40,114 @@
     />
   </head>
   <body>
+    <nav class="block block--secondary">
+      <div class="navbar container">
+        <a href="/">
+          <svg class="navbar__logo">
+            <use href="images/sprite.svg#logo"></use>
+          </svg>
+        </a>
+        <img
+          class="icon--gray nav__toggler"
+          src="images/menu.svg"
+          alt="menu icon"
+        />
+        <div class="list__navbar hidden">
+          <ul class="list navbar__components">
+            <li>
+              <a href="#" class="link--weighted link__navbar">Features</a>
+            </li>
+            <li><a href="#" class="link--weighted link__navbar">Pricing</a></li>
+            <li>
+              <a href="#" class="link--weighted link__navbar">Resources</a>
+            </li>
+          </ul>
+          <ul class="list navbar__registration">
+            <li><a href="#" class="link--weighted link__navbar">Login</a></li>
+            <li><button class="btn btn--cyan btn--round">Sign up</button></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="block--secondary grid grid--1x2 hero">
+      <header class="hero__content">
+        <h1 class="hero__heading">More than just shorter links</h1>
+        <p>
+          Build your brand's recognition and get detailed insights on how your
+          links are performing.
+        </p>
+        <button class="btn btn--cyan btn--round">Get started</button>
+      </header>
+      <img src="images/hero.svg" alt="hero section image" class="hero__image" />
+    </section>
+
+    <section class="block--accent block--input link-shorten">
+      <form class="input-group">
+        <input class="input" type="text" placeholder="Shorten a link here..." />
+        <button type="submit" class="btn btn--cyan btn--square">
+          Shorten it!
+        </button>
+      </form>
+    </section>
+
+    <section class="block block--primary">
+      <div class="container features">
+        <header class="features__info">
+          <h2>Advanced Statistics</h2>
+          <p>
+            Track how your links are performing across the web with our advanced
+            statistics dashboard.
+          </p>
+        </header>
+        <div class="grid grid--1x3 feature__blocks">
+          <article class="feature block--secondary feature__brand">
+            <span class="icon--container feature__icon">
+              <svg class="icon--large">
+                <use href="images/sprite.svg#icon-brand-recognition"></use>
+              </svg>
+            </span>
+            <h3 class="feature__heading">Brand Recognition</h3>
+            <p>
+              Boost your brand recognition with each click. Generic links don’t
+              mean a thing. Branded links help instil confidence in your
+              content.
+            </p>
+          </article>
+          <article class="feature block--secondary feature__record">
+            <span class="icon--container feature__icon">
+              <svg class="icon--large">
+                <use href="images/sprite.svg#icon-detailed-records"></use>
+              </svg>
+            </span>
+            <h3 class="feature__heading">Detailed Records</h3>
+            <p>
+              Gain insights into who is clicking your links. Knowing when and
+              where people engage with your content helps inform better
+              decisions.
+            </p>
+          </article>
+          <article class="feature block--secondary feature__customizable">
+            <span class="icon--container feature__icon">
+              <svg class="icon--large">
+                <use href="images/sprite.svg#icon-fully-customizable"></use>
+              </svg>
+            </span>
+            <h3 class="feature__heading">Fully Customizable</h3>
+            <p>
+              Improve brand awareness and content discoverability through
+              customizable links, supercharging audience engagement.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="block block--accent block--svg action">
+      <h2 class="text--secondary">Boost your links today</h2>
+      <button class="btn btn--cyan btn--round">Get started</button>
+    </section>
+
     <footer class="block block--footer footer">
       <div class="container grid grid--1x5">
         <svg class="footer__logo">
@@ -69,14 +202,21 @@
         class="copyright__link"
         href="https://www.frontendmentor.io?ref=challenge"
         target="_blank"
+        rel="noopener"
       >
         Frontend Mentor
       </a>
       . Coded by
-      <a class="copyright__link" href="https://github.com/lmnhsnl">
+      <a
+        class="copyright__link"
+        target="_blank"
+        rel="noopener"
+        href="https://github.com/lmnhsnl"
+      >
         Laman Hasanli</a
       >.
     </section>
+
     <script src="js/main.js"></script>
   </body>
 </html>

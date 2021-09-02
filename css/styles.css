@@ -39,7 +39,7 @@ h3 {
 }
 
 h1 {
-  font-size: 4.5rem;
+  font-size: 4rem;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -61,12 +61,14 @@ p {
     font-size: 1.5rem;
   }
 
-  h1 {
-    font-size: 5.7rem;
-  }
-
   h2 {
     font-size: 3.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 6rem;
   }
 }
 
@@ -93,7 +95,12 @@ a {
   transition: color 0.5s;
 }
 
+.link--social-media {
+  transition: transform 0.5s;
+}
+
 .link--social-media:hover {
+  transform: translateY(-0.2rem);
   filter: invert(58%) sepia(48%) saturate(628%) hue-rotate(131deg)
     brightness(109%) contrast(90%);
 }
@@ -127,11 +134,12 @@ a {
 
 .btn--cyan {
   background: var(--color-cyan);
-  transition: background 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 .btn--cyan:hover {
   background: hsl(180, 52%, 63%);
+  transform: translateY(-0.2rem);
 }
 
 .btn--round {
@@ -400,6 +408,7 @@ a {
   margin: 0;
   padding: 1.4rem 2.3rem;
   margin-bottom: 2rem;
+  width: 100%;
 }
 
 .nav__toggler {
@@ -463,13 +472,19 @@ a {
 .hero__content {
   order: 2;
   text-align: center;
-  max-width: 400px;
+  max-width: 270px;
   margin: 2rem auto 0;
   font-size: 1.8rem;
 }
 
 .hero__heading {
   margin-bottom: 1.8rem;
+}
+
+@media screen and (min-width: 350px) {
+  .hero__content {
+    max-width: 300px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -490,26 +505,39 @@ a {
   }
 
   .hero__heading {
-    margin-bottom: 1rem;
+    margin-bottom: 0.4rem;
   }
 }
 
 /* Link Shortening Block */
 .link-shorten {
-  max-width: 1000px;
-  padding: 2rem 2rem 1rem 2rem;
+  padding: 2.5rem 2.5rem 1.5rem 2.5rem;
   border-radius: 7px;
+  margin: 0 3rem 2rem;
+  transform: translateY(9rem);
 }
 
 @media screen and (min-width: 768px) {
   .link-shorten {
+    transform: translateY(8rem);
+    margin: -5rem auto 0;
+    max-width: 700px;
     padding: 3.3rem 5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .link-shorten {
+    max-width: 950px;
+    transform: translateY(7rem);
   }
 }
 
 /* Features block */
 .features {
   text-align: center;
+  padding-top: 13.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .features__info {
@@ -519,7 +547,7 @@ a {
 }
 
 .features__info h2 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .feature__blocks {
@@ -542,6 +570,10 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+  .features {
+    padding-bottom: 3rem;
+  }
+
   .feature__blocks {
     margin: 7rem 2rem 12rem;
   }
@@ -579,15 +611,20 @@ a {
 
 /* Call to Action Block*/
 .action {
-  padding: 3.6rem;
+  padding: 8.5rem 0 7.5rem;
   text-align: center;
 }
 
 .action h2 {
   font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 @media screen and (min-width: 768px) {
+  .action {
+    padding: 5rem 0 4rem;
+  }
+
   .action h2 {
     font-size: 3.5rem;
   }
@@ -599,6 +636,7 @@ a {
   font-size: 1.6rem;
   line-height: 2;
   padding-bottom: 1rem;
+  padding-top: 5.5rem;
 }
 
 .footer .grid--1x5 {
