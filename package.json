@@ -1,0 +1,18 @@
+{
+  "name": "Shortly",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "shrtco.de": "^1.0.4-rc.1"
+  },
+  "devDependencies": {
+    "cssnano": "^5.0.8"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
