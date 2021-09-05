@@ -62,6 +62,3 @@ document
     const api_url = `https://api.shrtco.de/v2/shorten?url=${input}`;
     getLink(api_url, input);
   });
-
-//TODO:
-//3.If possible loader
