@@ -19,10 +19,6 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://shortly-lmnhsnl.netlify.app/" />
-    <meta
-      property="og:image"
-      content="https://pbs.twimg.com/profile_images/1047378912819531776/jg7V1u54_400x400.jpg"
-    />
     <link
       rel="icon"
       type="image/png"
@@ -83,9 +79,16 @@
     </section>
 
     <section class="block--accent block--input link-shorten">
-      <form class="input-group">
-        <input class="input" type="text" placeholder="Shorten a link here..." />
-        <button type="submit" class="btn btn--cyan btn--square">
+      <form
+        class="input-group link-shorten__form"
+        data-error="Please add a link"
+      >
+        <input
+          class="input link__input"
+          type="url"
+          placeholder="Shorten a link here... (May take a minute)"
+        />
+        <button type="button" class="btn btn--cyan btn--square shorten__button">
           Shorten it!
         </button>
       </form>

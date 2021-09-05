@@ -229,11 +229,29 @@ a {
   gap: 0.7rem;
 }
 
-.input__warning {
-  /*FIXME: input warning*/
+.error input {
+  border: 2px solid var(--color-warning);
+}
+
+.error ::placeholder {
   color: var(--color-warning);
+}
+
+.error {
+  position: relative;
+}
+
+.error::after {
+  top: 35%;
+  content: attr(data-error);
+  position: absolute;
+  color: var(--color-warning);
+  width: 100%;
   font-style: italic;
-  font-size: 1.5rem;
+}
+
+.error.input-group {
+  gap: 2.5rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -245,7 +263,8 @@ a {
     font-size: 1.6rem;
   }
 
-  .input-group {
+  .input-group,
+  .error.input-group {
     flex-direction: row;
     gap: 1.7rem;
     align-items: center;
@@ -253,6 +272,10 @@ a {
 
   .input-group .input {
     flex-grow: 1;
+  }
+
+  .error::after {
+    top: 100%;
   }
 }
 
@@ -538,20 +561,28 @@ a {
   border-radius: 7px;
   display: flex;
   flex-direction: column;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 500;
   gap: 0.5rem;
-  margin: 3rem;
+  margin: 2.5rem 1.2rem;
+  overflow: hidden;
 }
 
 .link-to-shorten {
   color: black;
   border-bottom: 2px solid var(--color-primary);
   padding-bottom: 1.5rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .shortened-link {
   color: var(--color-cyan);
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .copy {
@@ -561,21 +592,27 @@ a {
 
 @media screen and (min-width: 768px) {
   .link-holder {
-    flex-direction: row;
     align-items: center;
-    padding-top: 2rem;
+    flex-direction: row;
+    gap: 2rem;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
     padding-bottom: 2rem;
+    padding-top: 2rem;
   }
 
   .link-to-shorten {
     border: 0;
     padding: 0 1rem;
     margin: 0;
+    flex-grow: 1;
+    text-align: left;
   }
 
   .shortened-link {
-    /*FIXME:*/
-    margin-left: auto;
+    margin-bottom: 0;
   }
 
   .copy {
@@ -585,14 +622,21 @@ a {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .link-holder {
+    max-width: 950px;
+  }
+}
+
 /* Features block */
 .features {
   text-align: center;
-  padding-top: 13.5rem;
+  padding-top: 5rem;
   padding-bottom: 1.5rem;
 }
 
 .features__info {
+  padding-top: 8.5rem;
   line-height: 1.6;
   max-width: 400px;
   margin: 0 auto 3.7rem;
