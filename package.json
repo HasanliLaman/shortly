@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "regenerator-runtime": "^0.13.9",
     "shrtco.de": "^1.0.4-rc.1"
   },
   "devDependencies": {

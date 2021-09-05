@@ -1,4 +1,5 @@
 "use strict";
+import "regenerator-runtime/runtime";
 
 // Setting Feature icon to be in the middle of Feature block
 var mediaQuery = window.matchMedia("(max-width: 767px)");
