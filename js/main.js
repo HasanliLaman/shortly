@@ -25,6 +25,7 @@ async function getLink(api_url, input) {
   const response = await fetch(api_url);
   const data = await response.json();
 
+  document.querySelector(".fas").style.display = "none";
   if (!data.ok) {
     document.querySelector(".link-shorten__form").classList.add("error");
   } else {
@@ -58,6 +59,7 @@ async function getLink(api_url, input) {
 document
   .querySelector(".shorten__button")
   .addEventListener("click", function () {
+    document.querySelector(".fas").style.display = "inline-block";
     const input = document.querySelector(".link__input").value;
     document.querySelector(".link__input").value = "";
     const api_url = `https://api.shrtco.de/v2/shorten?url=${input}`;
