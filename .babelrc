@@ -1,4 +1,5 @@
 {
+  "presets": ["@babel/plugin-transform-runtime"],
   "plugins": [
     [
       "transform-runtime",
